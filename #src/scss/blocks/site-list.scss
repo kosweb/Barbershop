@@ -1,0 +1,9 @@
+.site-list {
+	@media (min-width: $tablet-width) {
+		width: 570px;
+	}
+
+	@media (min-width: $desktop-width) {
+		width: 780px;
+	}
+}

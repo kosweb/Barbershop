@@ -1,0 +1,47 @@
+.page-header {
+
+	@media (min-width: $tablet-width) {
+		background-color: #000000;
+	}
+}
+
+.page-header__logo {
+	display: block;
+	height: 85px;
+	text-align: center;
+
+	@media (min-width: $tablet-width) {
+
+		width: 100%;
+		height: 400px;
+
+		background-color: #000000;
+		background-image: url('../../img/bg-header-x1.webp');
+		background-repeat: no-repeat;
+		background-position: center -9px;
+	}
+
+	@media (min-width: $desktop-width) {
+		height: 648px;
+
+		background-position: center 0;
+		background-size: cover;
+	}
+}
+
+.page-header__logo img {
+	width: 226px;
+	height: 85px;
+
+	@media (min-width: $tablet-width) {
+		display: block;
+		width: 370px;
+		height: auto;
+		margin: 0 auto;
+		margin-top: 40px;
+	}
+
+	@media (min-width: $desktop-width) {
+		margin-top: 57px;
+	}
+}

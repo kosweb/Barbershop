@@ -1,3 +1,10 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: transparent;
+}
+
 @font-face {
 	font-weight: normal;
 	font-family: 'PT Sans Narrow';
@@ -41,9 +48,10 @@ body {
 
 	font-size: 18px;
 	line-height: 27px;
-	font-family: Arial, sans-serif;
+	font-family: 'PT Sans Narrow', Arial, sans-serif;
 	color: var(--body-font-color);
 	font-style: normal;
+	font-weight: normal;
 
 	background-color: var(--bg-darkgrey);
 }

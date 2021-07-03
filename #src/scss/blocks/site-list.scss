@@ -7,3 +7,26 @@
 		width: 780px;
 	}
 }
+
+.site-list__item {
+	display: flex;
+	justify-content: start;
+	align-items: center;
+
+	width: 250px;
+	height: 50px;
+
+	padding: 0 20px;
+
+	font-weight: bold;
+	text-transform: uppercase;
+
+	box-shadow: 0 -1px 0 #71543f, inset 0 1px 0 #886e5b;
+	background-color: #826550;
+
+	& a {
+		line-height: 24px;
+		color: #ffffff;
+		text-decoration: none;
+	}
+}

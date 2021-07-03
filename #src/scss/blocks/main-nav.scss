@@ -20,31 +20,36 @@
 	border: none;
 	background-color: #6a4d38;
 
-	&--burger {
-		position: relative;
-		width: 36px;
+	@media (min-width: $tablet-width) {
+		display: none;
+	}
+
+}
+
+.button-burger {
+	position: relative;
+	width: 36px;
+	height: 2px;
+	background-color: #ffffff;
+
+	&::before,
+	&::after {
+		content: "";
+		position: absolute;
+		left: 0;
+		width: 100%;
 		height: 2px;
-		background-color: #ffffff;
+		background: #ffffff;
+		transform-origin: 50% 50%;
+		transition: top .2s .2s, transform .2s;
+	}
 
-		&::before,
-		&::after {
-			content: "";
-			position: absolute;
-			left: 0;
-			width: 100%;
-			height: 2px;
-			background: #ffffff;
-			transform-origin: 50% 50%;
-			transition: top .2s .2s, transform .2s;
-		}
+	&::before {
+		top: 10px;
+	}
 
-		&::before {
-			top: 10px;
-		}
-
-		&::after {
-			top: -10px;
-		}
+	&::after {
+		top: -10px;
 	}
 
 	&--open {
@@ -65,11 +70,6 @@
 			transform: rotate3d(0,0,1,-45deg);
 		}
 	}
-
-	@media (min-width: $tablet-width) {
-		display: none;
-	}
-
 }
 
 .main-nav__wrapper {

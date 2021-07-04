@@ -1,5 +1,5 @@
-let projectFolder = 'dist';
-let sourceFolder = '#src';
+const projectFolder = 'build';
+const sourceFolder = 'source';
 
 let path = {
 	build: {
@@ -29,7 +29,7 @@ let path = {
 }
 
 
-let {src, dest} = require('gulp'),
+const {src, dest} = require('gulp'),
 		gulp = require('gulp'),
 		browsersync = require('browser-sync').create(),
 		del = require('del'),
@@ -41,7 +41,8 @@ let {src, dest} = require('gulp'),
 		fileInclude = require('gulp-file-include'),
 		uglify = require('gulp-uglify-es').default,
 		imageMin = require('gulp-imagemin'),
-		webp = require('gulp-webp');
+		webp = require('gulp-webp'),
+		plumber = require('gulp-plumber');
 		// webphtml = require('gulp-webp-html'),
 		// webpcss = require('gulp-webp-css');
 
@@ -49,10 +50,11 @@ let {src, dest} = require('gulp'),
 function browserSync() {
 	browsersync.init({
 		server: {
-			baseDir: './' + projectFolder + '/'
+			baseDir: path.clean
 		},
 		port: 6969,
-		notify: false
+		notify: false,
+		online: true
 	})
 }
 
@@ -66,6 +68,7 @@ function html() {
 
 function css() {
 	return src(path.src.css)
+		.pipe(plumber())
 		.pipe(
 			scss({
 				outputStyle: 'expanded'
@@ -78,7 +81,6 @@ function css() {
 				cascade: true
 			})
 		)
-		// .pipe(webpcss())
 		.pipe(dest(path.build.css))
 		.pipe(cleanCss())
 		.pipe(
@@ -108,7 +110,7 @@ function images() {
 	return src(path.src.img)
 		.pipe(
 			webp({
-				quality: 70
+				quality: 90
 			})
 		)
 		.pipe(dest(path.build.img))

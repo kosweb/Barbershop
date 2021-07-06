@@ -4,16 +4,18 @@ $tablet-width: 768px;
 $tablet-max-width: 1299px;
 $desktop-width: 1300px;
 
-$phones-paddings: calc(20 / 320 * 100%);
-$tablets-paddings: calc(30 / 768 * 100%);
-$desktops-paddings: calc(40 / 1300 * 100%);
+$phone-padding: 20px;
+$tablet-padding: 30px;
+$desktop-padding: 40px;
 
 $retina-dpi: 144dpi;
 $retina-dppx: 1.5dppx;
 
 html {
-	--bg-darkgrey: #292929;
-	--bg-lightgrey: #f8f5f2;
+	--bg-dark-grey: #292929;
+	--bg-grey: #404040;
+	--bg-light-grey: #353535;
+	--bg-light: #f8f5f2;
 	--bg-dark-send: #6a4d38;
 	--bg-light-send: #826550;
 	--body-font-color: #f7f4f1;

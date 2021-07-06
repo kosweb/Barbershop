@@ -40,7 +40,7 @@
 	padding: 0;
 
 	border: none;
-	background-color: #6a4d38;
+	background-color: var(--bg-dark-send);
 
 	@media (min-width: $tablet-width) {
 		display: none;

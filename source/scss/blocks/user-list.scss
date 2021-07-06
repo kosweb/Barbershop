@@ -1,5 +1,5 @@
 .user-list {
-	background-color: var(--bg-light-send);
+	background-color: var(--bg-dark-send);
 
 	@media (min-width: $tablet-width) {
 		width: 60px;
@@ -19,8 +19,7 @@
 
 	padding: 0 20px;
 
-	background-color: var(--bg-light-send);
-	box-shadow: 0 -1px 0 #71543f, inset 0 1px 0 #886e5b;
+	background-color: var(--bg-dark-send);
 }
 
 .user-list__login {

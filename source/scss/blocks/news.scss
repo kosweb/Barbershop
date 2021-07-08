@@ -1,9 +1,11 @@
 .news {
 	position: relative;
 	padding-top: 35px;
+	padding-bottom: 30px;
 
 	color: #000000;
 	background-color: var(--bg-milk-white);
+	border-bottom: 1px solid #e5ddd5;
 
 	&::before {
 		content: '';
@@ -28,6 +30,7 @@
 
 	@include reset-list();
 	margin: 0 auto;
+	margin-bottom: 5px;
 	padding: $phone-padding;
 }
 
@@ -54,7 +57,10 @@
 		top: 50px;
 		width: 0;
 		height: 0;
-		border: 25px black solid;
+		border-top: 15px black solid;
+		border-bottom: 15px black solid;
+		border-left: 25px black solid;
+		border-right: 25px black solid;
 		border-bottom-color: transparent;
 		border-left-color: transparent;
 		border-right-color: transparent;
@@ -72,4 +78,12 @@
 	&:first-child {
 		margin-bottom: 40px;
 	}
+}
+
+.news__to-all {
+	margin: 0 auto;
+
+	color: #000000;
+	background-color: var(--bg-milk-white);
+	border: 1px solid #e5ddd5;
 }

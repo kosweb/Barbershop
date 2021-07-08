@@ -9,7 +9,11 @@
 	<body>
 		<header class="page-header">
 			<a href="#" class="page-header__logo">
-				<img src="img/logotype-mobile.svg" alt="Барбершоп «Бородинский»" class="page-header__logo-img" width="226" height="30">
+				<picture>
+					<source media="(min-width: 1200px)" srcset="./img/logotype-desktop.svg">
+					<source media="(min-width: 768px)" srcset="./img/logotype-tablet.svg">
+					<img src="./img/logotype-mobile.svg" alt="Логотип Барбершопа «Бородинский»">
+				</picture>
 			</a>
 			<nav class="main-nav main-nav--closed">
 				<button class="main-nav__button" type="button">
@@ -146,11 +150,13 @@
 			<section class="reviews">
 				<div class="reviews__wrapper slider">
 					<h2 class="reviews__title title">Отзывы о нас</h2>
-					<a href="#" class="reviews__write button">Оставить свой</a>
 					<div class="reviews__list slider__list">
-						<blockquote class="reviews__item">
+						<blockquote class="reviews__item reviews__item--show">
 							<p class="reviews__author-picture">
-								<img src="" alt="Фото Тревиса Баркера" class="reviews__author-image" width="50" height="33">
+								<picture>
+									<source type="image/webp" srcset="./img/travis.webp">
+									<img src="./img/travis.jpg" alt="Фото Тревиса Баркера" class="reviews__author-image" width="50" height="33">
+								</picture>
 							</p>
 							<cite class="reviews__author-name">Трэвис Баркер</cite>
 							<p class="reviews__text">
@@ -160,7 +166,10 @@
 						</blockquote>
 						<blockquote class="reviews__item">
 							<p class="reviews__author-picture">
-								<img src="" alt="Фото Майка Шиноды" class="reviews__author-image" width="50" height="33">
+								<picture>
+									<source type="image/webp" srcset="./img/mike.webp">
+									<img src="./img/mike.jpg" alt="Фото Майка Шиноды" class="reviews__author-image" width="50" height="33">
+								</picture>
 							</p>
 							<cite class="reviews__author-name">Майк Шинода</cite>
 							<p class="reviews__text">
@@ -170,7 +179,10 @@
 						</blockquote>
 						<blockquote class="reviews__item">
 							<p class="reviews__author-picture">
-								<img src="" alt="Фото Фреда Дёрста" class="reviews__author-image" width="50" height="33">
+								<picture>
+									<source type="image/webp" srcset="./img/fred.webp">
+									<img src="./img/fred.jpg" alt="Фото Фреда Дёрста" class="reviews__author-image" width="50" height="33">
+								</picture>
 							</p>
 							<cite class="reviews__author-name">Фред Дёрст</cite>
 							<p class="reviews__text">
@@ -178,8 +190,8 @@
 								барбершоп и не пожалел, очень круто!
 							</p>
 						</blockquote>
-						<button class="previews__prev" type="button">Предыдущий отзыв</button>
-						<button class="previews__next" type="button">Следующий отзыв</button>
+						<button class="reviews__prev" type="button">Предыдущий отзыв</button>
+						<button class="reviews__next" type="button">Следующий отзыв</button>
 					</div>
 					<p class="reviews__toggles slider__toggles">
 						<button class="slider__toggle" type="button">1</button>
@@ -187,6 +199,7 @@
 						<button class="slider__toggle" type="button">3</button>
 					</p>
 				</div>
+				<a href="#" class="reviews__write button">Оставить свой</a>
 			</section>
 		</main>
 

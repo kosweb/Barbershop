@@ -15,8 +15,8 @@
 .stats__header {
 	padding: 30px 40px 25px 40px;
 
-	color: #000000;
-	background-color: #ffffff;
+	color: var(--dark-grey-color);
+	background-color: var(--milk-white-color);
 
 	@media (min-width: $desktop-width) {
 		flex-shrink: 0;
@@ -47,7 +47,7 @@
 
 	margin-bottom: 15px;
 
-	background-color: var(--bg-light-grey);
+	background-color: var(--light-grey-color);
 
 	& tr {
 		display: flex;
@@ -56,7 +56,7 @@
 	}
 
 	& tr:nth-child(2n) {
-		background-color: var(--bg-grey);
+		background-color: var(--mid-grey-color);
 	}
 
 	@media (min-width: $tablet-width) {

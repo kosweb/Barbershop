@@ -1,6 +1,8 @@
 .page-footer {
 	position: relative;
 
+	padding-top: 40px;
+
 	&::before {
 		content: '';
 		position: absolute;
@@ -13,4 +15,12 @@
 		background-repeat: no-repeat;
 		background-size: cover;
 	}
+}
+
+.page-footer__contacts {
+	margin-bottom: 25px;
+}
+
+.page-footer__social {
+	margin-bottom: 30px;
 }

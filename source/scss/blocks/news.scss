@@ -3,8 +3,8 @@
 	padding-top: 35px;
 	padding-bottom: 30px;
 
-	color: #000000;
-	background-color: var(--bg-milk-white);
+	color: var(--dark-grey-color);
+	background-color: var(--milk-white-color);
 	border-bottom: 1px solid #e5ddd5;
 
 	&::before {
@@ -28,7 +28,8 @@
 .news__list {
 	max-width: 360px;
 
-	@include reset-list();
+	list-style: none;
+
 	margin: 0 auto;
 	margin-bottom: 5px;
 	padding: $phone-padding;
@@ -44,10 +45,10 @@
 
 	margin-right: 20px;
 
-	color: var(--bg-milk-white);
+	color: var(--milk-white-color);
 	text-align: center;
 
-	background-color: #000000;
+	background-color: var(--dark-grey-color);
 
 	&::after {
 		content: '';
@@ -57,13 +58,10 @@
 		top: 50px;
 		width: 0;
 		height: 0;
-		border-top: 15px black solid;
-		border-bottom: 15px black solid;
-		border-left: 25px black solid;
-		border-right: 25px black solid;
-		border-bottom-color: transparent;
-		border-left-color: transparent;
-		border-right-color: transparent;
+		border-top: 15px var(--dark-grey-color) solid;
+		border-bottom: 15px transparent solid;
+		border-left: 25px transparent solid;
+		border-right: 25px transparent solid;
 	}
 }
 
@@ -83,7 +81,7 @@
 .news__to-all {
 	margin: 0 auto;
 
-	color: #000000;
-	background-color: var(--bg-milk-white);
-	border: 1px solid #e5ddd5;
+	color: var(--dark-grey-color);
+	background-color: var(--milk-white-color);
+	border: 1px solid var(--dark-grey-color);
 }

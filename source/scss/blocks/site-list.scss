@@ -1,5 +1,5 @@
 .site-list {
-	background-color: var(--bg-light-send);
+	background-color: var(--light-send-color);
 
 	@media (min-width: $tablet-width) {
 		width: 570px;
@@ -23,11 +23,11 @@
 	text-transform: uppercase;
 
 	box-shadow: 0 -1px 0 #71543f, inset 0 1px 0 #886e5b;
-	background-color: #826550;
+	background-color: var(--light-send-color);
 
 	& a {
 		line-height: 24px;
-		color: #ffffff;
+		color: var(--milk-white-color);
 		text-decoration: none;
 	}
 }

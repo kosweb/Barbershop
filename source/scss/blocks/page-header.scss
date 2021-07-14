@@ -1,6 +1,9 @@
 .page-header {
 
 	@media (min-width: $tablet-width) {
+		display: flex;
+		flex-direction: column;
+
 		background-color: var(--dark-grey-color);
 	}
 }

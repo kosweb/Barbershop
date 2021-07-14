@@ -7,16 +7,14 @@
 
 	@include reset-list();
 	background-color: var(--dark-grey-color);
-	border-top: 1px solid var(--border-grey-color);
-	border-bottom: 1px solid var(--border-grey-color);
 }
 
 .social__item {
 	width: calc(100% / 3);
-	border-right: 1px solid var(--border-grey-color);
+	border: 1px solid var(--border-grey-color);
 
-	&:last-child {
-		border-right: none;
+	&:not(:first-child) {
+		margin-left: -1px;
 	}
 }
 

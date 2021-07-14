@@ -3,6 +3,10 @@
 
 	padding-top: 40px;
 
+	@media (min-width: $tablet-width) {
+		padding-top: 50px;
+	}
+
 	&::before {
 		content: '';
 		position: absolute;
@@ -14,6 +18,21 @@
 		background-image: url('../../img/corner-double-dark.svg');
 		background-repeat: no-repeat;
 		background-size: cover;
+
+		@media (min-width: $tablet-width) {
+			display: none;
+		}
+	}
+}
+
+.page-footer__wrapper {
+	@media (min-width: $tablet-width) {
+		position: relative;
+
+		width: 768px;
+		margin: 0 auto;
+		padding-left: $tablet-padding;
+		padding-right: $tablet-padding;
 	}
 }
 
@@ -23,4 +42,14 @@
 
 .page-footer__social {
 	margin-bottom: 30px;
+}
+
+.page-footer__copyright {
+	@media (min-width: $tablet-width) {
+		position: absolute;
+		top: 0;
+		right: 30px;
+
+		padding-bottom: 0;
+	}
 }

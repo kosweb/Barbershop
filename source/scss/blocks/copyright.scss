@@ -17,4 +17,8 @@
 	color: var(--milk-white-color);
 	background-color: var(--mid-grey-color);
 	border: 1px solid var(--border-grey-color);
+
+	@media (min-width: $tablet-width) {
+		background-color: transparent;
+	}
 }

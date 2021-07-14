@@ -85,4 +85,10 @@ img {
 	font-weight: bold;
 	text-transform: uppercase;
 	text-align: center;
+
+	@media (min-width: $tablet-width) {
+		font-size: 40px;
+		line-height: 40px;
+		text-align: left;
+	}
 }

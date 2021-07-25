@@ -75,6 +75,14 @@ img {
 	@media (min-width: $tablet-width) {
 		width: 160px;
 	}
+
+	@media (min-width: $desktop-width) {
+		transition: 0.2s;
+
+		&:hover {
+			border-color: var(--light-grey-color);
+		}
+	}
 }
 
 .title {

@@ -1,3 +1,8 @@
+@keyframes show {
+	0% { opacity: 0.6; }
+	100% { opacity: 1; }
+}
+
 .slider__list {
 	@include reset-list();
 }
@@ -7,6 +12,7 @@
 
 	&--show {
 		display: block;
+		animation: show 0.2s;
 	}
 }
 
@@ -19,6 +25,7 @@
 
 	background-color: transparent;
 	border: none;
+	transition: all 0.2s;
 
 	&:last-child {
 		margin-right: 0;

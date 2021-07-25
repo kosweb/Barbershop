@@ -5,12 +5,20 @@
 	justify-content: center;
 
 	padding-bottom: 25px;
+
+	@media (min-width: $desktop-width) {
+		align-items: flex-end;
+	}
 }
 
 .copyright__text {
 	margin-bottom: 15px;
 
 	font-weight: normal;
+
+	@media (min-width: $desktop-width) {
+		margin-right: 38px;
+	}
 }
 
 .copyright__link {
@@ -20,5 +28,13 @@
 
 	@media (min-width: $tablet-width) {
 		background-color: transparent;
+	}
+
+	@media (min-width: $desktop-width) {
+		border-color: var(--mid-grey-color);
+
+		&:hover {
+			border-color: var(--border-grey-color);
+		}
 	}
 }

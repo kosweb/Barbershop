@@ -12,7 +12,7 @@
 
 .user-list__item {
 	display: flex;
-	justify-content: start;
+	justify-content: flex-start;
 	align-items: center;
 
 	height: 50px;
@@ -22,36 +22,64 @@
 	background-color: var(--dark-send-color);
 
 	@media (min-width: $tablet-width) {
+		justify-content: flex-end;
+
 		height: 70px;
 
 		padding: 0;
 
 		background-color: #000000;
 	}
+
+
 }
 
 .user-list__login {
 	position: relative;
-	display: block;
+	display: flex;
+	align-items: center;
+	justify-content: end;
 
-	padding-left: 20px;
+	height: 100%;
+
+	padding-left: 25px;
 
 	line-height: 24px;
 	color: var(--milk-white-color);
 	text-decoration: none;
-
-	@media (min-width: $tablet-width) {
-		padding-left: 30px;
-
-		text-transform: uppercase;
-		font-weight: bold;
-	}
+	transition: 0.2s;
 
 	& svg {
 		position: absolute;
 		top: 50%;
 		left: 0;
 
+		opacity: 0.5;
+
 		transform: translateY(-50%);
+		transition: 0.2s;
+	}
+
+	@media (min-width: $tablet-width) {
+		padding-left: 30px;
+
+		text-transform: uppercase;
+		font-weight: bold;
+
+		&:hover svg {
+			fill: var(--light-send-color);
+		}
+
+		&:hover {
+			color: var(--light-send-color);
+		}
+
+		&:active svg {
+			fill: var(--dark-send-color);
+		}
+
+		&:active {
+			color: var(--dark-send-color);
+		}
 	}
 }

@@ -24,12 +24,9 @@
 		order: 1;
 	}
 
-	.main-nav--closed .site-list__item--active {
-		justify-content: center;
-	}
-
 	.main-nav--closed .site-list__item--active a {
 		transform: translateX(35px);
+		justify-content: center;
 	}
 }
 
@@ -73,6 +70,9 @@
 
 	@media (min-width: $desktop-width) {
 		width: 960px;
+
+		padding-left: $desktop-padding;
+		padding-right: $desktop-padding;
 	}
 }
 

@@ -1,8 +1,8 @@
 $phone-width: 320px;
 $phone-max-width: 767px;
 $tablet-width: 768px;
-$tablet-max-width: 1299px;
-$desktop-width: 1300px;
+$tablet-max-width: 1199px;
+$desktop-width: 1200px;
 
 $phone-padding: 20px;
 $tablet-padding: 30px;
@@ -19,4 +19,5 @@ html {
 	--dark-send-color: #6a4d38;
 	--light-send-color: #826550;
 	--border-grey-color: #9f9f9f;
+	--border-light-grey-color: #e5ddd5;
 }

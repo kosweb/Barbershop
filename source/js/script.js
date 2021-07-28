@@ -1,2 +1,2 @@
-@@include('botton-open-close.js')
+@@include('button-open-close.js')
 @@include('slider-toggles.js')

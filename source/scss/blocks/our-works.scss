@@ -1,0 +1,114 @@
+.our-works {
+	padding-top: 30px;
+	padding-left: $phone-padding;
+	padding-right: $phone-padding;
+	padding-bottom: 50px;
+	color: var(--dark-grey-color);
+	background-color: var(--milk-white-color);
+}
+
+.our-works__title {
+	margin-bottom: 30px;
+}
+
+.our-works__example {
+	width: 280px;
+
+	margin: 0 auto;
+	margin-bottom: 20px;
+
+	border: 1px solid var(--border-light-grey-color);
+
+	&--top {
+		position: relative;
+	}
+}
+
+.our-works__picture {
+	margin-bottom: 20px;
+}
+
+.our-works__best {
+	position: absolute;
+	top: 51%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	height: 50px;
+	padding-left: 25px;
+	padding-right: 20px;
+
+	font-size: 20px;
+	font-weight: bold;
+	text-transform: uppercase;
+
+	color: var(--milk-white-color);
+	background-color: var(--light-send-color);
+
+	&::after {
+		position: absolute;
+		right: -30px;
+		content: '';
+		width: 50px;
+		height: 10px;
+		background-image: url('../../img/corner-double-send.svg');
+		transform: rotate(90deg);
+	}
+}
+
+.our-works__author-name {
+	margin-left: 20px;
+
+	font-size: 24px;
+	font-weight: bold;
+	font-style: normal;
+	color: #000000;
+}
+
+.our-works__author-text {
+	margin: 20px 20px 25px 20px;
+}
+
+.our-works__services-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	@include reset-list;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: 15px;
+}
+
+.our-works__services-item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	min-width: 118px;
+	min-height: 30px;
+
+	margin-bottom: 10px;
+
+	text-transform: uppercase;
+
+	background-position: 0 50%;
+	background-repeat: no-repeat;
+
+	&--haircut {
+		background-image: url('../../img/scissors-icon.svg');
+		background-size: 21px 20px;
+	}
+
+	&--beard {
+		background-image: url('../../img/beard-icon.svg');
+		background-size: 23px 21px;
+	}
+
+	&--mustache {
+		padding-left: 10px;
+		background-image: url('../../img/mustache-icon.svg');
+		background-size: 45px 12px;
+	}
+}

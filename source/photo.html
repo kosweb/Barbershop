@@ -3,27 +3,35 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./css/style.min.css">
 	<title>Барбершоп «Бородинский»</title>
 </head>
 <body>
-	<header class="photo-header">
-		<a href="#" class="photo-header__logo">
-			<img src="img/logotype-mobile.svg" alt="Барбершоп «Бородинский»" class="photo-header__logo-img" width="226" height="30">
+	<header class="page-header">
+		<a href="#" class="page-header__logo">
+			<picture>
+				<source media="(min-width: 1200px)" srcset="./img/logotype-mobile.svg">
+				<source media="(min-width: 768px)" srcset="./img/logotype-tablet.svg">
+				<img src="./img/logotype-mobile.svg" alt="Логотип Барбершопа «Бородинский»">
+			</picture>
 		</a>
-		<nav class="main-nav">
-			<button class="main-nav__button" type="button">Открыть меню</button>
+		<nav class="main-nav main-nav--closed">
+			<button class="main-nav__button" type="button">
+				<span class="visually-hidden">Открыть меню</span>
+				<span class="button-burger"></span>
+			</button>
 			<div class="main-nav__wrapper">
 				<ul class="main-nav__list site-list">
 					<li class="site-list__item">
 						<a href="index.html">Главная</a>
 					</li>
-					<li class="site-list__item">
-						<a>Наши работы</a>
+					<li class="site-list__item site-list__item--active">
+						<a href="photo.html">Работы</a>
 					</li>
 					<li class="site-list__item">
 						<a href="form.html">Записаться</a>
 					</li>
-					<li class="site-list__item site-list__item--active">
+					<li class="site-list__item">
 						<a href="#">Контакты</a>
 					</li>
 					<li class="site-list__item">
@@ -32,7 +40,10 @@
 				</ul>
 				<ul class="main-nav__list user-list">
 					<li class="user-list__item">
-						<a href="login.html" class="user-list__login">Войти</a>
+						<a href="login.html" class="user-list__login">
+							<svg viewBox="0 0 512 512" height="16" width="16" xmlns="http://www.w3.org/2000/svg" fill="#ffffff"><g id="Solid"><path d="m260.52 329.539a24 24 0 0 0 33.941 33.941l90.51-90.51a24 24 0 0 0 0-33.941l-90.51-90.509a24 24 0 0 0 -33.941 0 24 24 0 0 0 0 33.941l49.539 49.539h-262.059a24 24 0 0 0 -24 24 24 24 0 0 0 24 24h262.059z"/><path d="m448 24h-224a40 40 0 0 0 -40 40v32a24 24 0 0 0 48 0v-24h208v368h-208v-24a24 24 0 0 0 -48 0v32a40 40 0 0 0 40 40h224a40 40 0 0 0 40-40v-384a40 40 0 0 0 -40-40z"/></g></svg>
+							Войти
+						</a>
 					</li>
 				</ul>
 			</div>
@@ -44,61 +55,101 @@
 		<a href="index.html" class="photo-main__link button">На главную</a>
 
 		<section class="our-works">
-			<h2 class="our-works__title">Наши работы</h2>
+			<h2 class="our-works__title title">Наши работы</h2>
 
-			<blockquote class="works">
-				<b class="works__best">Работа месяца</b>
-				<div class="works__picture"><img src="#" alt="Фотография довольного клиента" class="works__img"></div>
-				<cite class="works__author-name">Лжепётр Мчиславский</cite>
-				<p class="works__author-text">
+			<blockquote class="our-works__example our-works__example--top">
+				<b class="our-works__best">Работа месяца</b>
+				<div class="our-works__picture">
+					<picture>
+						<source type="image/webp" media="(min-width: 1200px)" srcset="./img/photo-1-desktop.webp">
+						<source type="image/webp" media="(min-width: 768px)" srcset="./img/photo-1-tablet.webp">
+						<source type="image/webp" srcset="./img/photo-1-mobile.webp">
+
+						<source media="(min-width: 1200px)" srcset="./img/photo-1-desktop.jpg">
+						<source media="(min-width: 768px)" srcset="./img/photo-1-tablet.jpg">
+						<img class="our-works__img" src="./img/photo-1-mobile.jpg" alt="Фотография довольного клиента">
+					</picture>
+				</div>
+				<cite class="our-works__author-name">Лжепётр Мчиславский</cite>
+				<p class="our-works__author-text">
 					Где я только не стригся, но так как делаете это вы — не умеет никто
 					другой! Еще раз спасибо и до скорого!
 				</p>
-				<ul class="works__services-list">
+				<ul class="our-works__services-list">
 					<h3 class="visually-hidden">Список услуг</h3>
-					<li class="works__services-item">Стрижка</li>
-					<li class="works__services-item">Бритье</li>
-					<li class="works__services-item">Усы</li>
+					<li class="our-works__services-item our-works__services-item--haircut">Стрижка</li>
+					<li class="our-works__services-item our-works__services-item--beard">Бритье</li>
+					<li class="our-works__services-item our-works__services-item--mustache">Усы</li>
 				</ul>
 			</blockquote>
-			<blockquote class="works">
-				<div class="works__picture"><img src="#" alt="Фотография довольного клиента" class="works__img"></div>
-				<cite class="works__author-name">Саша Мальцев</cite>
-				<p class="works__author-text">
+			<blockquote class="our-works__example">
+				<div class="our-works__picture">
+					<picture>
+						<source type="image/webp" media="(min-width: 1200px)" srcset="./img/photo-2-desktop.webp">
+						<source type="image/webp" media="(min-width: 768px)" srcset="./img/photo-2-tablet.webp">
+						<source type="image/webp" srcset="./img/photo-2-mobile.webp">
+
+						<source media="(min-width: 1200px)" srcset="./img/photo-2-desktop.jpg">
+						<source media="(min-width: 768px)" srcset="./img/photo-2-tablet.jpg">
+						<img class="our-works__img" src="./img/photo-2-mobile.jpg" alt="Фотография довольного клиента">
+					</picture>
+				</div>
+				<cite class="our-works__author-name">Саша Мальцев</cite>
+				<p class="our-works__author-text">
 					Попросил омолодить и омолодили! Кто теперь скажет, что мне 45?
 				</p>
-				<ul class="works__services-list">
+				<ul class="our-works__services-list">
 					<h3 class="visually-hidden">Список услуг</h3>
-					<li class="works__services-item">Стрижка</li>
+					<li class="our-works__services-item our-works__services-item--haircut">Стрижка</li>
 				</ul>
 			</blockquote>
-			<blockquote class="works">
-				<div class="works__picture"><img src="#" alt="Фотография довольного клиента" class="works__img"></div>
-				<cite class="works__author-name">Владимир Иваныч</cite>
-				<p class="works__author-text">
+			<blockquote class="our-works__example">
+				<div class="our-works__picture">
+					<picture>
+						<source type="image/webp" media="(min-width: 1200px)" srcset="./img/photo-3-desktop.webp">
+						<source type="image/webp" media="(min-width: 768px)" srcset="./img/photo-3-tablet.webp">
+						<source type="image/webp" srcset="./img/photo-3-mobile.webp">
+
+						<source media="(min-width: 1200px)" srcset="./img/photo-3-desktop.jpg">
+						<source media="(min-width: 768px)" srcset="./img/photo-3-tablet.jpg">
+						<img class="our-works__img" src="./img/photo-3-mobile.jpg" alt="Фотография довольного клиента">
+					</picture>
+				</div>
+				<cite class="our-works__author-name">Владимир Иваныч</cite>
+				<p class="our-works__author-text">
 					К зимнему сезону — готов!
 				</p>
-				<ul class="works__services-list">
+				<ul class="our-works__services-list">
 					<h3 class="visually-hidden">Список услуг</h3>
-					<li class="works__services-item">Борода</li>
-					<li class="works__services-item">Усы</li>
+					<li class="our-works__services-item our-works__services-item--beard">Борода</li>
+					<li class="our-works__services-item our-works__services-item--mustache">Усы</li>
 				</ul>
 			</blockquote>
-			<blockquote class="works">
-				<div class="works__picture"><img src="#" alt="Фотография довольного клиента" class="works__img"></div>
-				<cite class="works__author-name">Винстон Синий</cite>
-				<p class="works__author-text">
+			<blockquote class="our-works__example">
+				<div class="our-works__picture">
+					<picture>
+						<source type="image/webp" media="(min-width: 1200px)" srcset="./img/photo-4-desktop.webp">
+						<source type="image/webp" media="(min-width: 768px)" srcset="./img/photo-4-tablet.webp">
+						<source type="image/webp" srcset="./img/photo-4-mobile.webp">
+
+						<source media="(min-width: 1200px)" srcset="./img/photo-4-desktop.jpg">
+						<source media="(min-width: 768px)" srcset="./img/photo-4-tablet.jpg">
+						<img class="our-works__img" src="./img/photo-4-mobile.jpg" alt="Фотография довольного клиента">
+					</picture>
+				</div>
+				<cite class="our-works__author-name">Винстон Синий</cite>
+				<p class="our-works__author-text">
 					Как только заростаю и волосы начинают мешать видеть — бегом в Бородинский!
 				</p>
-				<ul class="works__services-list">
+				<ul class="our-works__services-list">
 					<h3 class="visually-hidden">Список услуг</h3>
-					<li class="works__services-item">Стрижка</li>
+					<li class="our-works__services-item our-works__services-item--haircut">Стрижка</li>
 				</ul>
 			</blockquote>
 		</section>
 
 		<section class="works-price">
-			<h2 class="works-price__title">Прейскурант</h2>
+			<h2 class="works-price__title title">Прейскурант</h2>
 
 			<table class="works-price__list">
 				<tr>
@@ -137,36 +188,47 @@
 		</section>
 	</main>
 
-	<footer class="photo-footer">
-		<div class="photo-footer__wrapper">
-			<div class="photo-footer__contacts contacts">
+	<footer class="page-footer">
+		<div class="page-footer__wrapper">
+			<div class="page-footer__contacts contacts">
 				<b class="contacts__title">Барбершоп «Бородинский»</b>
-				<p class="contacts__text">г. Санкт-Петербург, ул. Большая Конюшенная 19/8<br>
-					<a href="tel:+78125556666" class="contacts__phone">
+				<p class="contacts__text">г. Санкт-Петербург, ул. Большая<br> Конюшенная 19/8<br>
+					<a href="tel:+78125556666" class="contacts__phone button">
 						<span class="contacts__phone-mobile">Тел.:</span> +7 (812) 555-66-66
 					</a>
 				</p>
 			</div>
 
-			<div class="photo-footer__social social">
+			<div class="page-footer__social social">
 				<b class="social__title">Давайте дружить!</b>
-				<ul class="social-list">
-					<li class="social-item">
-						<a href="#" class="social-link social-link--vkotakte">Мы в Вконтакте</a>
+				<ul class="social__list">
+					<li class="social__item">
+						<a href="#" class="social__link social__link--vkontakte">
+							<span class="visually-hidden">Мы в Вконтакте</span>
+							<svg xmlns="http://www.w3.org/2000/svg" width="27" height="15" viewBox="0 0 26.14 14.91"><path d="M26 13.47l-.09-.17a13.55 13.55 0 00-2.6-3q-.87-.83-1.1-1.12A1 1 0 0122 8a10.27 10.27 0 011.22-1.78l.88-1.16q2.35-3.13 2-4L26 .94a.8.8 0 00-.4-.22 2.14 2.14 0 00-.87 0h-3.92a.51.51 0 00-.27 0h-.3a.6.6 0 00-.15.14.93.93 0 00-.14.24 22.22 22.22 0 01-1.46 3.06q-.5.84-.93 1.46a7 7 0 01-.71.91 4.94 4.94 0 01-.52.47q-.23.18-.35.15l-.23-.05a.9.9 0 01-.31-.33 1.49 1.49 0 01-.16-.53V1.6a3.14 3.14 0 000-.62 2.12 2.12 0 00-.14-.44.73.73 0 00-.28-.33 1.57 1.57 0 00-.46-.18A9 9 0 0012.57 0a8.93 8.93 0 00-3.25.33 1.83 1.83 0 00-.52.41q-.25.3-.07.33a1.67 1.67 0 011.16.59l.08.16a2.6 2.6 0 01.19.63 6.32 6.32 0 01.12 1 10.59 10.59 0 010 1.7q-.07.71-.13 1.1a2.21 2.21 0 01-.18.64 2.69 2.69 0 01-.16.3l-.07.07a1 1 0 01-.37.07.86.86 0 01-.46-.19 3.27 3.27 0 01-.56-.52 7 7 0 01-.66-.93q-.37-.6-.76-1.42l-.22-.39q-.2-.38-.56-1.11t-.62-1.43A.9.9 0 005.2.9h-.07a.93.93 0 00-.22-.16A1.44 1.44 0 004.6.65L.87.68A1 1 0 00.1.94L0 1a.44.44 0 000 .22 1.08 1.08 0 00.08.37Q.9 3.53 1.86 5.31t1.66 2.87Q4.23 9.27 5 10.24t1 1.24l.37.41.34.33a8.06 8.06 0 001 .78 16.34 16.34 0 001.4.9 7.6 7.6 0 001.79.72 6.19 6.19 0 002 .22h1.57a1.08 1.08 0 00.72-.3l.05-.07a.9.9 0 00.1-.25 1.38 1.38 0 000-.37 4.48 4.48 0 01.09-1.05 2.77 2.77 0 01.23-.71 1.74 1.74 0 01.29-.4 1.19 1.19 0 01.23-.2h.11a.86.86 0 01.77.21 4.52 4.52 0 01.83.79q.39.47.93 1.05a6.41 6.41 0 001 .87l.27.16a3.31 3.31 0 00.71.3 1.53 1.53 0 00.76.07l3.48-.05a1.58 1.58 0 00.8-.17.68.68 0 00.34-.37 1.06 1.06 0 000-.46 1.71 1.71 0 00-.1-.36z" fill="#fff"/></svg>
+						</a>
 					</li>
-					<li class="social-item">
-						<a href="#" class="social-link social-link--facebook">Мы в Фэйсбуке</a>
+					<li class="social__item">
+						<a href="#" class="social__link social__link--facebook">
+							<span class="visually-hidden">Мы в Фэйсбуке</span>
+							<svg xmlns="http://www.w3.org/2000/svg" width="19" height="22" viewBox="0 0 10.15 21.74"><path d="M3.34 1.12A4.77 4.77 0 016.53 0h3.61v3.81H7.81a1.07 1.07 0 00-1.09.83v2.55h3.42c-.08 1.23-.24 2.45-.41 3.67h-3v10.87H2.21V10.86H0V7.21h2.19V3.66a3.83 3.83 0 011.15-2.54z" fill="#fff"/></svg>
+						</a>
 					</li>
-					<li class="social-item">
-						<a href="#" class="social-link social-link--instagram">Мы в Инстаграме</a>
+					<li class="social__item">
+						<a href="#" class="social__link social__link--instagram">
+							<span class="visually-hidden">Мы в Инстаграме</span>
+							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><path d="M18 0H2a2 2 0 00-2 2v16a2 2 0 002 2h16a2 2 0 002-2V2a2 2 0 00-2-2zm-8 6a4 4 0 11-4 4 4 4 0 014-4zM2.5 18a.47.47 0 01-.5-.5V9h2.1a3.4 3.4 0 00-.1 1 6 6 0 1012 0 3.4 3.4 0 00-.1-1H18v8.5a.47.47 0 01-.5.5zM18 4.5a.47.47 0 01-.5.5h-2a.47.47 0 01-.5-.5v-2a.47.47 0 01.5-.5h2a.47.47 0 01.5.5z" fill="#fff"/></svg>
+						</a>
 					</li>
 				</ul>
 			</div>
 
-			<div class="photo-footer__copyright copyright">
-				<b class="copyright-text">Разработано:</b>
+			<div class="page-footer__copyright copyright">
+				<b class="copyright__text">Разработано:</b>
 				<a href="" class="copyright__link button">HTML Academy</a>
 			</div>
+		</div>
 	</footer>
+	<script src="./js/script.min.js"></script>
 </body>
 </html>

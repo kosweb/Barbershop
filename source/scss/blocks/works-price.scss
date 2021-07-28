@@ -1,0 +1,27 @@
+.works-price {
+	position: relative;
+
+	padding-top: 35px;
+
+	background-color: var(--mid-grey-color);
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		margin-top: -35px;
+		height: 35px;
+		background-image: url('../../img/corner-double-light-dark.svg');
+		background-repeat: no-repeat;
+		background-size: cover;
+
+		@media (min-width: $tablet-width) {
+			display: none;
+		}
+	}
+}
+
+// .work-price__title {
+// }

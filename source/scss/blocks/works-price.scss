@@ -2,6 +2,7 @@
 	position: relative;
 
 	padding-top: 35px;
+	padding-bottom: 50px;
 
 	background-color: var(--mid-grey-color);
 
@@ -23,5 +24,60 @@
 	}
 }
 
-// .work-price__title {
-// }
+.works-price__title {
+	margin-bottom: 30px;
+}
+
+.works-price__list {
+	width: 320px;
+
+	margin: 0 auto;
+	padding-left: $phone-padding;
+	padding-right: $phone-padding;
+
+	& tr {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+		width: 280px;
+		margin-bottom: 20px;
+
+		font-size: 20px;
+	}
+
+	&-number {
+		display: none;
+	}
+
+	&-style {
+		width: 190px;
+
+		font-weight: bold;
+	}
+
+	&-option {
+		order: 1;
+	}
+
+	&-price {
+		width: 75px;
+		text-align: right;
+	}
+}
+
+.works-price__discont {
+	width: 280px;
+	margin: 0 auto;
+	padding: 20px 45px 20px 110px;
+
+	font-size: 20px;
+	font-weight: normal;
+
+	border: 1px solid rgba($color: #ffffff, $alpha: 0.3);
+
+	background-image: url('../../img/clock.svg');
+	background-repeat: no-repeat;
+	background-position: 20px 50%;
+	background-size: 58px 57px;
+}

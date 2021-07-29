@@ -22,18 +22,18 @@
 
 .social__item {
 	width: calc(100% / 3);
-	border: 1px solid var(--border-grey-color);
+	border: 1px solid rgba($color: #ffffff, $alpha: 0.3);
 
 	@media (min-width: $desktop-width) {
 		width: 50px;
 		height: 50px;
 		margin-right: 5px;
 
-		border-color: var(--mid-grey-color);
+		border: 1px solid rgba($color: #ffffff, $alpha: 0.3);
 		transition: 0.2s;
 
 		&:hover {
-			border-color: var(--border-grey-color);
+			border: 1px solid rgba($color: #ffffff, $alpha: 0.5);
 		}
 
 		&:last-child {

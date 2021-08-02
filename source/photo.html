@@ -7,7 +7,7 @@
 	<title>Барбершоп «Бородинский»</title>
 </head>
 <body>
-	<header class="page-header">
+	<header class="page-header page-header-photo">
 		<a href="#" class="page-header__logo">
 			<picture>
 				<source media="(min-width: 1200px)" srcset="./img/logotype-mobile.svg">
@@ -52,10 +52,10 @@
 
 	<main class="photo-main">
 		<h1 class="visually-hidden">Наши работы и прейскурант</h1>
-		<a href="index.html" class="photo-main__link button">На главную</a>
 
 		<section class="our-works">
 			<h2 class="our-works__title title">Наши работы</h2>
+			<a href="index.html" class="our-works__link button">На главную</a>
 
 			<blockquote class="our-works__example our-works__example--top">
 				<b class="our-works__best">Работа месяца</b>
@@ -70,17 +70,19 @@
 						<img class="our-works__img" src="./img/photo-1-mobile.jpg" alt="Фотография довольного клиента">
 					</picture>
 				</div>
-				<cite class="our-works__author-name">Лжепётр Мчиславский</cite>
-				<p class="our-works__author-text">
-					Где я только не стригся, но так как делаете это вы — не умеет никто
-					другой! Еще раз спасибо и до скорого!
-				</p>
-				<ul class="our-works__services-list">
-					<h3 class="visually-hidden">Список услуг</h3>
-					<li class="our-works__services-item our-works__services-item--haircut">Стрижка</li>
-					<li class="our-works__services-item our-works__services-item--beard">Бритье</li>
-					<li class="our-works__services-item our-works__services-item--mustache">Усы</li>
-				</ul>
+				<div class="our-works__wrapper">
+					<cite class="our-works__author-name">Лжепётр Мчиславский</cite>
+					<p class="our-works__author-text">
+						Где я только не стригся, но так как делаете это вы — не умеет никто
+						другой! Еще раз спасибо и до скорого!
+					</p>
+					<ul class="our-works__services-list">
+						<h3 class="visually-hidden">Список услуг</h3>
+						<li class="our-works__services-item our-works__services-item--haircut">Стрижка</li>
+						<li class="our-works__services-item our-works__services-item--beard">Бритье</li>
+						<li class="our-works__services-item our-works__services-item--mustache">Усы</li>
+					</ul>
+				</div>
 			</blockquote>
 			<blockquote class="our-works__example">
 				<div class="our-works__picture">
@@ -94,14 +96,16 @@
 						<img class="our-works__img" src="./img/photo-2-mobile.jpg" alt="Фотография довольного клиента">
 					</picture>
 				</div>
-				<cite class="our-works__author-name">Саша Мальцев</cite>
-				<p class="our-works__author-text">
-					Попросил омолодить и омолодили! Кто теперь скажет, что мне 45?
-				</p>
-				<ul class="our-works__services-list">
-					<h3 class="visually-hidden">Список услуг</h3>
-					<li class="our-works__services-item our-works__services-item--haircut">Стрижка</li>
-				</ul>
+				<div class="our-works__wrapper">
+					<cite class="our-works__author-name">Саша Мальцев</cite>
+					<p class="our-works__author-text">
+						Попросил омолодить и омолодили! Кто теперь скажет, что мне 45?
+					</p>
+					<ul class="our-works__services-list">
+						<h3 class="visually-hidden">Список услуг</h3>
+						<li class="our-works__services-item our-works__services-item--haircut">Стрижка</li>
+					</ul>
+				</div>
 			</blockquote>
 			<blockquote class="our-works__example">
 				<div class="our-works__picture">
@@ -115,15 +119,17 @@
 						<img class="our-works__img" src="./img/photo-3-mobile.jpg" alt="Фотография довольного клиента">
 					</picture>
 				</div>
-				<cite class="our-works__author-name">Владимир Иваныч</cite>
-				<p class="our-works__author-text">
-					К зимнему сезону — готов!
-				</p>
-				<ul class="our-works__services-list">
-					<h3 class="visually-hidden">Список услуг</h3>
-					<li class="our-works__services-item our-works__services-item--beard">Борода</li>
-					<li class="our-works__services-item our-works__services-item--mustache">Усы</li>
-				</ul>
+				<div class="our-works__wrapper">
+					<cite class="our-works__author-name">Владимир Иваныч</cite>
+					<p class="our-works__author-text">
+						К зимнему сезону — готов!
+					</p>
+					<ul class="our-works__services-list">
+						<h3 class="visually-hidden">Список услуг</h3>
+						<li class="our-works__services-item our-works__services-item--beard">Борода</li>
+						<li class="our-works__services-item our-works__services-item--mustache">Усы</li>
+					</ul>
+				</div>
 			</blockquote>
 			<blockquote class="our-works__example">
 				<div class="our-works__picture">
@@ -137,54 +143,58 @@
 						<img class="our-works__img" src="./img/photo-4-mobile.jpg" alt="Фотография довольного клиента">
 					</picture>
 				</div>
-				<cite class="our-works__author-name">Винстон Синий</cite>
-				<p class="our-works__author-text">
-					Как только заростаю и волосы начинают мешать видеть — бегом в Бородинский!
-				</p>
-				<ul class="our-works__services-list">
-					<h3 class="visually-hidden">Список услуг</h3>
-					<li class="our-works__services-item our-works__services-item--haircut">Стрижка</li>
-				</ul>
+				<div class="our-works__wrapper">
+					<cite class="our-works__author-name">Винстон Синий</cite>
+					<p class="our-works__author-text">
+						Как только заростаю и волосы начинают мешать видеть — бегом в Бородинский!
+					</p>
+					<ul class="our-works__services-list">
+						<h3 class="visually-hidden">Список услуг</h3>
+						<li class="our-works__services-item our-works__services-item--haircut">Стрижка</li>
+					</ul>
+				</div>
 			</blockquote>
 		</section>
 
 		<section class="works-price">
-			<h2 class="works-price__title title">Прейскурант</h2>
+			<div class="works-price__wrapper">
+				<h2 class="works-price__title title">Прейскурант</h2>
 
-			<table class="works-price__list">
-				<tr>
-					<td class="works-price__list-number">1</td>
-					<td class="works-price__list-style">Классическая стрижка</td>
-					<td class="works-price__list-option"><span>(</span>с мытьём головы<span>)</span></td>
-					<td class="works-price__list-price">1 500 руб.</td>
-				</tr>
-				<tr>
-					<td class="works-price__list-number">2</td>
-					<td class="works-price__list-style">Современный вариант</td>
-					<td class="works-price__list-option"><span>(</span>с мытьём головы<span>)</span></td>
-					<td class="works-price__list-price">1 500 руб.</td>
-				</tr>
-				<tr>
-					<td class="works-price__list-number">3</td>
-					<td class="works-price__list-style">Индивидуальный подход</td>
-					<td class="works-price__list-option"><span>(</span>с мытьём головы<span>)</span></td>
-					<td class="works-price__list-price">2 000 руб.</td>
-				</tr>
-				<tr>
-					<td class="works-price__list-number">4</td>
-					<td class="works-price__list-style">Бритьё бороды</td>
-					<td class="works-price__list-option"><span>(</span>без мытья<span>)</span></td>
-					<td class="works-price__list-price">500 руб.</td>
-				</tr>
-				<tr>
-					<td class="works-price__list-number">5</td>
-					<td class="works-price__list-style">Бритьё головы</td>
-					<td class="works-price__list-option"><span>(</span>с мытьём головы<span>)</span></td>
-					<td class="works-price__list-price">1 000 руб.</td>
-				</tr>
-			</table>
+				<table class="works-price__list">
+					<tr>
+						<td class="works-price__list-number">1</td>
+						<td class="works-price__list-style">Классическая стрижка</td>
+						<td class="works-price__list-option"><span>(</span>с мытьём головы<span>)</span></td>
+						<td class="works-price__list-price">1 500 руб.</td>
+					</tr>
+					<tr>
+						<td class="works-price__list-number">2</td>
+						<td class="works-price__list-style">Современный вариант</td>
+						<td class="works-price__list-option"><span>(</span>с мытьём головы<span>)</span></td>
+						<td class="works-price__list-price">1 500 руб.</td>
+					</tr>
+					<tr>
+						<td class="works-price__list-number">3</td>
+						<td class="works-price__list-style">Индивидуальный подход</td>
+						<td class="works-price__list-option"><span>(</span>с мытьём головы<span>)</span></td>
+						<td class="works-price__list-price">2 000 руб.</td>
+					</tr>
+					<tr>
+						<td class="works-price__list-number">4</td>
+						<td class="works-price__list-style">Бритьё бороды</td>
+						<td class="works-price__list-option"><span>(</span>без мытья<span>)</span></td>
+						<td class="works-price__list-price">500 руб.</td>
+					</tr>
+					<tr>
+						<td class="works-price__list-number">5</td>
+						<td class="works-price__list-style">Бритьё головы</td>
+						<td class="works-price__list-option"><span>(</span>с мытьём головы<span>)</span></td>
+						<td class="works-price__list-price">1 000 руб.</td>
+					</tr>
+				</table>
 
-			<h3 class="works-price__discont">C 10:00 до 14:00<br> скидка 20%</h3>
+				<h3 class="works-price__discont">C 10:00 до 14:00<br> скидка 20%</h3>
+			</div>
 		</section>
 	</main>
 

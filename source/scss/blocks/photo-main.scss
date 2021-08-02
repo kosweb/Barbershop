@@ -1,7 +1,24 @@
 .photo-main {
 	padding-top: 50px;
-}
 
-.photo-main__link {
-	display: none;
+	@media (min-width: $tablet-width) {
+		position: relative;
+
+		padding-top: 0;
+
+		background-color: var(--milk-white-color);
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			margin-top: -45px;
+			height: 45px;
+			background-image: url('../../img/corner-white.svg');
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+	}
 }

@@ -5,10 +5,40 @@
 	padding-bottom: 50px;
 	color: var(--dark-grey-color);
 	background-color: var(--milk-white-color);
+
+	@media (min-width: $tablet-width) {
+		position: relative;
+		width: 768px;
+
+		margin: 0 auto;
+		padding-top: 60px;
+		padding-left: $tablet-padding;
+		padding-right: $tablet-padding;
+		padding-bottom: 60px;
+	}
 }
 
 .our-works__title {
 	margin-bottom: 30px;
+
+	@media (min-width: $tablet-width) {
+		margin-bottom: 50px;
+	}
+}
+
+.our-works__link {
+	display: none;
+
+	@media (min-width: $tablet-width) {
+		display: flex;
+		position: absolute;
+		top: 60px;
+		right: 30px;
+
+		color: var(--dark-grey-color);
+		background-color: var(--milk-white-color);
+		border: 1px solid var(--border-grey-color);
+	}
 }
 
 .our-works__example {
@@ -22,10 +52,38 @@
 	&--top {
 		position: relative;
 	}
+
+	@media (min-width: $tablet-width) {
+		display: flex;
+		width: 100%;
+
+		margin-bottom: 40px;
+	}
 }
 
 .our-works__picture {
 	margin-bottom: 20px;
+
+	@media (min-width: $tablet-width) {
+		flex-shrink: 0;
+		margin-right: 50px;
+		margin-bottom: 0;
+
+		& picture {
+			display: flex;
+		}
+	}
+}
+
+.our-works__wrapper {
+	@media (min-width: $tablet-width) {
+		display: flex;
+		flex-direction: column;
+
+		padding-top: 50px;
+		padding-bottom: 50px;
+		padding-right: 50px;
+	}
 }
 
 .our-works__best {
@@ -46,6 +104,10 @@
 	color: var(--milk-white-color);
 	background-color: var(--light-send-color);
 
+	@media (min-width: $tablet-width) {
+		top: 8%;
+	}
+
 	&::after {
 		position: absolute;
 		right: -30px;
@@ -64,10 +126,20 @@
 	font-weight: bold;
 	font-style: normal;
 	color: #000000;
+
+	@media (min-width: $tablet-width) {
+		margin-bottom: 35px;
+		margin-left: 0;
+	}
 }
 
 .our-works__author-text {
 	margin: 20px 20px 25px 20px;
+
+	@media (min-width: $tablet-width) {
+		margin: 0;
+		margin-bottom: auto;
+	}
 }
 
 .our-works__services-list {
@@ -79,6 +151,10 @@
 	margin-left: 20px;
 	margin-right: 20px;
 	margin-bottom: 15px;
+
+	@media (min-width: $tablet-width) {
+		margin: 0;
+	}
 }
 
 .our-works__services-item {

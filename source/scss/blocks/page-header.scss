@@ -48,3 +48,18 @@
 		margin-top: 57px;
 	}
 }
+
+// PHOTO PAGE
+
+.page-header-photo {
+
+	@media (min-width: $tablet-width) {
+		& .page-header__logo {
+			height: 210px;
+
+			background-size: cover;
+			background-position: center -75px;
+		}
+
+	}
+}

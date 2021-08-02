@@ -6,6 +6,11 @@
 
 	background-color: var(--mid-grey-color);
 
+	@media (min-width: $tablet-width) {
+		padding-top: 45px;
+		padding-bottom: 55px;
+	}
+
 	&::before {
 		content: '';
 		position: absolute;
@@ -19,21 +24,49 @@
 		background-size: cover;
 
 		@media (min-width: $tablet-width) {
-			display: none;
+			margin-top: -45px;
+			height: 45px;
 		}
 	}
 }
 
-.works-price__title {
-	margin-bottom: 30px;
-}
-
-.works-price__list {
+.works-price__wrapper {
 	width: 320px;
 
 	margin: 0 auto;
 	padding-left: $phone-padding;
 	padding-right: $phone-padding;
+
+	@media (min-width: $tablet-width) {
+		width: 768px;
+
+		margin: 0 auto;
+		padding-left: $tablet-padding;
+		padding-right: $tablet-padding;
+	}
+}
+
+.works-price__title {
+	margin-bottom: 30px;
+
+	@media (min-width: $tablet-width) {
+		margin-bottom: 50px;
+	}
+}
+
+.works-price__list {
+
+	@media (min-width: $tablet-width) {
+		width: 100%;
+		margin-bottom: 10px;
+		border-collapse: collapse;
+
+		& td {
+			width: fit-content;
+			padding: 20px 30px;
+			border: 1px solid rgba($color: #ffffff, $alpha: 0.3);
+		}
+	}
 
 	& tr {
 		display: flex;
@@ -44,10 +77,20 @@
 		margin-bottom: 20px;
 
 		font-size: 20px;
+
+		@media (min-width: $tablet-width) {
+			display: table-row;
+			width: auto;
+		}
 	}
 
 	&-number {
 		display: none;
+
+		@media (min-width: $tablet-width) {
+			display: table-cell;
+			text-align: center;
+		}
 	}
 
 	&-style {
@@ -58,11 +101,22 @@
 
 	&-option {
 		order: 1;
+
+		@media (min-width: $tablet-width) {
+			& span {
+				display: none;
+			}
+		}
 	}
 
 	&-price {
 		width: 75px;
 		text-align: right;
+
+		@media (min-width: $tablet-width) {
+			width: auto;
+			text-align: left;
+		}
 	}
 }
 
@@ -80,4 +134,20 @@
 	background-repeat: no-repeat;
 	background-position: 20px 50%;
 	background-size: 58px 57px;
+
+	@media (min-width: $tablet-width) {
+		width: 100%;
+		padding: 45px 100px 45px 185px;
+
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 30px;
+
+		background-position: 30px 50%;
+		background-size: 72px 71px;
+
+		& br {
+			display: none;
+		}
+	}
 }

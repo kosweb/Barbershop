@@ -19,6 +19,11 @@
 			background-image: url('../../img/corner-white.svg');
 			background-repeat: no-repeat;
 			background-size: cover;
+
+			@media (min-width: $desktop-width) {
+				margin-top: -70px;
+				height: 70px;
+			}
 		}
 	}
 }

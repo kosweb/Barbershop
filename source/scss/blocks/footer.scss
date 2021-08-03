@@ -44,9 +44,9 @@
 		grid-template-columns: repeat(3, 1fr);
 		align-items: flex-start;
 
-		width: 960px;
-		padding-left: 0;
-		padding-right: 0;
+		width: 1040px;
+		padding-left: $desktop-padding;
+		padding-right: $desktop-padding;
 	}
 }
 

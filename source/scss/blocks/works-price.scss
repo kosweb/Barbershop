@@ -11,6 +11,11 @@
 		padding-bottom: 55px;
 	}
 
+	@media (min-width: $tablet-width) {
+		padding-top: 75px;
+		padding-bottom: 80px;
+	}
+
 	&::before {
 		content: '';
 		position: absolute;
@@ -26,6 +31,10 @@
 		@media (min-width: $tablet-width) {
 			margin-top: -45px;
 			height: 45px;
+		}
+
+		@media (min-width: $desktop-width) {
+			display: none;
 		}
 	}
 }
@@ -44,6 +53,16 @@
 		padding-left: $tablet-padding;
 		padding-right: $tablet-padding;
 	}
+
+	@media (min-width: $desktop-width) {
+		display: grid;
+		grid-template-areas: 'a a'
+												 'b c';
+		gap: 50px;
+		width: 1040px;
+		padding-left: $desktop-padding;
+		padding-right: $desktop-padding;
+	}
 }
 
 .works-price__title {
@@ -51,6 +70,11 @@
 
 	@media (min-width: $tablet-width) {
 		margin-bottom: 50px;
+	}
+
+	@media (min-width: $desktop-width) {
+		grid-area: a;
+		margin-bottom: 0;
 	}
 }
 
@@ -64,7 +88,17 @@
 		& td {
 			width: fit-content;
 			padding: 20px 30px;
-			border: 1px solid rgba($color: #ffffff, $alpha: 0.3);
+			border: 1px solid rgba($color: #ffffff, $alpha: 0.1);
+		}
+	}
+
+	@media (min-width: $desktop-width) {
+		grid-area: b;
+
+		margin-bottom: 0;
+
+		& td {
+			padding: 15px 30px;
 		}
 	}
 
@@ -128,7 +162,7 @@
 	font-size: 20px;
 	font-weight: normal;
 
-	border: 1px solid rgba($color: #ffffff, $alpha: 0.3);
+	border: 1px solid rgba($color: #ffffff, $alpha: 0.1);
 
 	background-image: url('../../img/clock.svg');
 	background-repeat: no-repeat;
@@ -149,5 +183,17 @@
 		& br {
 			display: none;
 		}
+	}
+
+	@media (min-width: $desktop-width) {
+		grid-area: c;
+		width: 270px;
+		padding: 220px 70px 25px 70px;
+		font-size: 20px;
+		text-transform: none;
+		text-align: center;
+
+		background-position: 50% 35px;
+		background-size: 142px 139px;
 	}
 }

@@ -51,7 +51,8 @@
 
 // PHOTO PAGE
 
-.page-header-photo {
+.page-header-photo,
+.form-header {
 
 	@media (min-width: $tablet-width) {
 		& .page-header__logo {

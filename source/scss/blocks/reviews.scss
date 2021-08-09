@@ -161,6 +161,7 @@
 .reviews__prev,
 .reviews__next {
 	display: none;
+
 	@media (min-width: $tablet-width) {
 		display: block;
 
@@ -173,7 +174,7 @@
 		transition: 0.2s;
 
 		&:hover {
-			border-color: var(--light-grey-color);
+			border-color: #d5c9bd;
 		}
 	}
 }
@@ -215,7 +216,7 @@
 
 .reviews__write {
 	margin: 0 auto;
-	color: #000000;
+	color: var(--dark-grey-color);
 	background-color: var(--milk-white-color);
 	border: 1px solid var(--border-grey-color);
 

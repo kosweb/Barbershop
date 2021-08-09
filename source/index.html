@@ -127,31 +127,37 @@
 					<h2 class="news__title title">Новости и акции</h2>
 					<ul class="news__list">
 						<li class="news__item news__item--no-hidden">
-							<time class="news__date" datetime="2017-09-29">
-								<b class="news__day">29<br></b> Сент
-							</time>
-							<p class="news__text">
-								Нам наконец завезли Ягермайстер! Теперь вы можете пропусить
-								стаканчик во время стрижки.
-							</p>
+							<a href="#" class="news__item-wrapper">
+								<time class="news__date" datetime="2017-09-29">
+									<b class="news__day">29<br></b> Сент
+								</time>
+								<p class="news__text">
+									Нам наконец завезли Ягермайстер! Теперь вы можете пропусить
+									стаканчик во время стрижки.
+								</p>
+							</a>
 						</li>
 						<li class="news__item news__item--no-hidden">
-							<time class="news__date" datetime="2017-09-19">
-								<b class="news__day">19<br></b> Сент
-							</time>
-							<p class="news__text">
-								В нашей команде пополнение, Борис «Бритва» Стригунец, пополнил
-								наши стройные ряды. Спешите записаться!
-							</p>
+							<a href="#" class="news__item-wrapper">
+								<time class="news__date" datetime="2017-09-19">
+									<b class="news__day">19<br></b> Сент
+								</time>
+								<p class="news__text">
+									В нашей команде пополнение, Борис «Бритва» Стригунец, пополнил
+									наши стройные ряды. Спешите записаться!
+								</p>
+							</a>
 						</li>
 						<li class="news__item">
-							<time class="news__date" datetime="2017-09-19">
-								<b class="news__day">19<br></b> Сент
-							</time>
-							<p class="news__text">
-								В нашей команде пополнение, Борис «Бритва» Стригунец, пополнил
-								наши стройные ряды. Спешите записаться!
-							</p>
+							<a href="#" class="news__item-wrapper">
+								<time class="news__date" datetime="2017-09-19">
+									<b class="news__day">19<br></b> Сент
+								</time>
+								<p class="news__text">
+									В нашей команде пополнение, Борис «Бритва» Стригунец, пополнил
+									наши стройные ряды. Спешите записаться!
+								</p>
+							</a>
 						</li>
 					</ul>
 					<a href="#" class="news__to-all button">Показать все</a>
@@ -261,6 +267,31 @@
 				</div>
 			</div>
 		</footer>
+
+		<section class="modal modal-form modal--login">
+			<h2 class="modal-form__title">Личный кабинет</h2>
+			<p class="modal-form__description">
+				Введите свой логин и пароль, чтобы войти
+			</p>
+			<form action="https://echo.htmlacademy.ru" method="POST" class="login-form">
+				<div class="form__text">
+					<input class="login-user-field" type="text" placeholder="Логин">
+				</div>
+				<div class="form__text">
+					<input class="password-user-field" type="text" placeholder="Пароль">
+				</div>
+				<div class="form__checkbox-wrapper">
+					<label for="remember-me" class="form__checkbox login-form-checkbox">
+						<input class="visually-hidden input-checkbox" id="remember-me" type="checkbox" checked>
+						<span>Запомните меня</span>
+					</label>
+					<a href="#" class="forgot-password-link">Я забыл пароль!</a>
+				</div>
+				<button type="submit" class="modal__button button">Войти в личный кабинет</button>
+			</form>
+			<button class="modal-close" type="button">Закрыть</button>
+		</section>
+
 		<script src="./js/script.min.js"></script>
 	</body>
 </html>

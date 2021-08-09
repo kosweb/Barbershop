@@ -30,13 +30,21 @@
 }
 
 .form-main__wrapper {
-	position: relative;
-	width: 768px;
+	@media (min-width: $desktop-width) {
+		position: relative;
+		width: 768px;
 
-	margin: 0 auto;
-	padding-top: 60px;
-	padding-left: $tablet-padding;
-	padding-right: $tablet-padding;
+		margin: 0 auto;
+		padding-top: 60px;
+		padding-left: $tablet-padding;
+		padding-right: $tablet-padding;
+	}
+
+	@media (min-width: $desktop-width) {
+		width: 1040px;
+		padding-left: $desktop-padding;
+		padding-right: $desktop-padding;
+	}
 }
 
 .form-main__form {
@@ -61,11 +69,10 @@
 		right: 30px;
 
 		color: var(--dark-grey-color);
-		background-color: var(--milk-white-color);
 		border: 1px solid var(--border-light-grey-color);
 	}
 
-	@media (min-width: $desktop-width){
+	@media (min-width: $desktop-width) {
 		right: 40px;
 	}
 }
@@ -94,6 +101,7 @@
 		input,
 		textarea {
 			width: 100%;
+			transition: border-color 0.2s;
 		}
 
 		input {
@@ -132,24 +140,50 @@
 				margin-bottom: 0;
 			}
 
-			label:nth-of-type(1),
-			label:nth-of-type(2) {
+			@media (max-width: $tablet-max-width) {
+				label:nth-of-type(1),
+				label:nth-of-type(2) {
 
-				input {
-					border-right: none;
+					input {
+						border-right: none;
+					}
+				}
+			}
+
+			label:nth-of-type(1) {
+				@media (min-width: $desktop-width) {
+					grid-column: 1 / 3;
+				}
+			}
+
+			label:nth-of-type(2) {
+				@media (min-width: $desktop-width) {
+					grid-column: 3 / 5;
 				}
 			}
 
 			label:nth-of-type(3) {
 				margin-bottom: 0;
+
+				@media (min-width: $desktop-width) {
+					grid-column: 5 / 7;
+				}
 			}
 
 			label:nth-of-type(4) {
 				grid-column: 1 / -1;
+
+				@media (min-width: $desktop-width) {
+					grid-column: 1 / 4;
+				}
 			}
 
 			label:nth-of-type(5) {
 				grid-column: 1 / -1;
+
+				@media (min-width: $desktop-width) {
+					grid-column: 4 / 7;
+				}
 			}
 
 			label:nth-of-type(6) {
@@ -157,6 +191,20 @@
 				grid-column: 1 / -1;
 			}
 		}
+
+		@media (min-width: $desktop-width) {
+			grid-template-columns: repeat(6, 1fr);
+			grid-gap: 35px;
+
+			input:hover {
+				border-color: #d5c9bd;
+			}
+
+			textarea:hover {
+				border-color: #d5c9bd;
+			}
+		}
+
 	}
 
 	&--mid {
@@ -179,9 +227,25 @@
 
 				background-repeat: no-repeat;
 				background-position: 50% 100%;
+				cursor: pointer;
 
 				@media (min-width: $tablet-width) {
 					width: calc(100% / 5);
+				}
+
+				@media (min-width: $desktop-width) {
+					&:hover {
+						span {
+							&::before {
+								border-color: #d5c9bd;
+							}
+
+							&::after {
+								background-color: #d5c9bd;
+								border-color: #d5c9bd;
+							}
+						}
+					}
 				}
 
 				span {
@@ -202,6 +266,7 @@
 						left: 50%;
 						width: 52px;
 						height: 52px;
+						transition: 0.2s;
 					}
 
 					&::after {
@@ -211,7 +276,7 @@
 						height: 18px;
 						background-color: var(--border-light-grey-color);
 						opacity: 0;
-						transition: opacity 0.2s;
+						transition: 0.2s;
 					}
 				}
 			}
@@ -225,19 +290,38 @@
 			margin-bottom: 60px;
 		}
 
+		@media (min-width: $desktop-width) {
+			margin-bottom: 80px;
+		}
+
 		.form__fieldset-wrapper {
 			display: flex;
 			flex-direction: column;
+
+			padding-left: 37px;
 
 			@media (min-width: $tablet-width) {
 				display: grid;
 				grid-template-columns: 1fr 1fr;
 				grid-gap: 40px;
+
+				padding-left: 0;
+			}
+
+			@media (min-width: $desktop-width) {
+				grid-template-columns: 1fr 1fr 1fr;
+
+				label:hover {
+					span::before {
+						border-color: #d5c9bd;
+					}
+				}
 			}
 
 			label {
 				position: relative;
 				padding: 11px 0 11px 60px;
+				cursor: pointer;
 			}
 
 			span {
@@ -255,6 +339,7 @@
 					background-color: #ffffff;
 					border: 1px solid var(--border-light-grey-color);
 					transform: translateY(-50%);
+					transition: border-color 0.2s;
 				}
 
 				&::after {
@@ -352,13 +437,30 @@
 }
 
 .form__button {
-	background-color: var(--light-send-color);
 	color: var(--milk-white-color);
 	margin: 0 auto;
 	border: none;
+	background-color: var(--light-send-color);
+	transition: 0.2s;
 
 	@media (min-width: $tablet-width) {
 		width: 100%;
+	}
+
+	@media (min-width: $desktop-width) {
+		background-color: var(--light-send-color);
+
+		&:hover {
+			background-color: var(--dark-send-color);
+		}
+
+		&:active {
+			color: rgba($color: #ffffff, $alpha: 0.3);
+		}
+
+		&:disabled {
+			background-color: #aeaeae;
+		}
 	}
 }
 
